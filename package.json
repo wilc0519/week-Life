@@ -6,7 +6,9 @@
   "scripts": {
     "start": "npx sequelize-cli db:migrate && nodemon app.js",
     "lint": "eslint . --fix",
-    "lintErr": "eslint ."
+    "lintErr": "eslint .",
+    "newmanLocal":"newman run newman/Week_Life.postman_collection.json -e  newman/Local.postman_environment.json",
+    "newmanTest": "newman run newman/Week_Life.postman_collection.json -e  newman/Test.postman_environment.json"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +16,7 @@
   "dependencies": {
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "newman": "^5.3.0",
     "nodemon": "^2.0.9",
     "pg": "^8.6.0",
     "pg-hstore": "^2.3.4",
